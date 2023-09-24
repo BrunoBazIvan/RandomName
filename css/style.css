@@ -2,7 +2,10 @@
     font-family: warcraft;
     src: url(../world-of-warcraft-fonts/LifeCraft_Font.ttf) format('truetype');
 }
-
+@font-face {
+    font-family:"warcraft Folkard" ;
+    src: url(../world-of-warcraft-fonts/folkard_.ttf) format('truetype');
+}
 *{
     margin: 0;
     padding: 0;
@@ -71,7 +74,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30vh;
+    margin-top: 20vh;
 }
 .centrar div{
     margin: 1rem;
@@ -83,4 +86,51 @@ body{
     font-family: warcraft;
     font-size: 6vh;
     text-align: center;
+    font-weight: 0;
 }
+.tutulo h1{
+    font-weight: 0;
+}
+/* boton*/
+
+#boton{
+    background-color: #FFC107;
+    border: none;
+    color: #0c192c;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: warcraft;
+    text-transform: uppercase;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+#boton:hover{
+    animation: colorPulse 0.7s alternate infinite; /* Agrega una animación */
+    border-color: #FFA000;
+}
+@keyframes colorPulse {
+    0% {
+        background-color: #FFA000;
+    }
+    100% {
+        background-color: rgb(255, 122, 34);
+    }
+}
+/* Select */
+.Select{
+    background-color:white;
+    color: #000;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: warcraft;
+}
+.Select:hover {
+    transition: all 0.7s;
+    background-color: #ff9100;
+    cursor: pointer;
+}
+

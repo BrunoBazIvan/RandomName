@@ -41,4 +41,4 @@ addEventListener("DOMContentLoaded", () => {
     btn.addEventListener('click', () => {
         traerNombres();
     });
-});
+    });
