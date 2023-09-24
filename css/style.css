@@ -1,0 +1,86 @@
+@font-face {
+    font-family: warcraft;
+    src: url(../world-of-warcraft-fonts/LifeCraft_Font.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: #0c192c;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: absolute; /* Cambiar a posición absoluta para ocupar toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around; /* Espaciar las luces verticalmente */
+    z-index: -1; /* Colocar las luces detrás del contenido */
+}
+
+.bubbles span{
+    position: relative;
+    width:15px;
+    height: 15px;
+    background:linear-gradient(45deg, #FF5722, #FFC107);;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow:  0 0 0 5px rgba(255, 69, 34, 0.7),
+    0 0 25px rgba(255, 193, 7, 0.7),
+    0 0 50px rgba(255, 235, 59, 0.7);
+    animation: animate 15s linear infinite;
+    animation-duration: calc(200s / var(--i) );
+}
+
+
+@keyframes animate {
+    0%{
+        transform: translateY(100vh) scale(0);
+    
+    }
+    100%{
+        transform: translateY(-10vh)scale(1);
+    }
+}
+
+/* contenedor de nombres */
+
+#containerText{
+    font-family: warcraft;
+    color: white;
+    font-size: 5vh;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+}
+.centrar div{
+    margin: 1rem;
+    padding: 3px;
+}
+/* Contenedor titulo*/
+.titulo{
+    color:#EABE3F;
+    font-family: warcraft;
+    font-size: 6vh;
+    text-align: center;
+}
